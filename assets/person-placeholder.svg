@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Person placeholder</title>
+  <desc id="desc">Abstract portrait placeholder for organizer or speaker cards.</desc>
+  <rect width="640" height="480" rx="18" fill="#f7f8fc"/>
+  <circle cx="320" cy="178" r="76" fill="#0718b8" opacity=".92"/>
+  <path d="M178 422c22-88 80-132 142-132s120 44 142 132H178Z" fill="#ffc947"/>
+  <path d="M120 90h400M120 390h400" stroke="#dfe4f0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M120 90 320 390 520 90" fill="none" stroke="#0718b8" stroke-width="5" opacity=".12"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Microsoft Research Africa logo placeholder</title>
+  <desc id="desc">Four-panel research logo placeholder.</desc>
+  <rect width="160" height="160" rx="18" fill="#ffffff"/>
+  <rect x="1" y="1" width="158" height="158" rx="17" fill="none" stroke="#dfe4f0" stroke-width="2"/>
+  <rect x="42" y="42" width="32" height="32" fill="#0718b8"/>
+  <rect x="82" y="42" width="32" height="32" fill="#ffc947"/>
+  <rect x="42" y="82" width="32" height="32" fill="#ffc947"/>
+  <rect x="82" y="82" width="32" height="32" fill="#0718b8"/>
+</svg>

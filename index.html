@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0718b8" />
+    <meta
+      name="description"
+      content="Deep Learning Indaba 2026 workshop on scaling multi-turn participatory AI evaluations in health and education across African contexts."
+    />
+    <meta
+      name="keywords"
+      content="Deep Learning Indaba, participatory AI, multi-turn evaluation, health AI, education AI, LLM benchmarking, African AI"
+    />
+    <meta name="author" content="YUX Cultural AI Lab, Kitala.ai, Microsoft Research Africa" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Beyond Benchmarks: Scaling Multi-Turn Participatory AI Evaluations"
+    />
+    <meta
+      property="og:description"
+      content="A hands-on Deep Learning Indaba 2026 workshop for mapping where AI models fail across precise use cases and population segments."
+    />
+    <meta property="og:image" content="assets/social-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Beyond Benchmarks | Deep Learning Indaba 2026 Workshop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Sticky navigation keeps all single-page sections reachable on desktop and mobile. -->
+    <header class="site-header" data-header>
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Beyond Benchmarks home">
+          <span class="brand-mark" aria-hidden="true">BB</span>
+          <span>
+            <strong>Beyond Benchmarks</strong>
+            <small>DLI 2026 Workshop</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Open navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="primary-menu">
+          <a href="#about">About</a>
+          <a href="#objectives">Objectives</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#resources">Resources</a>
+          <a href="#organizers">Organizers</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+            <span class="theme-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero: abstract inline SVG avoids stock imagery while keeping the page lightweight. -->
+      <section class="hero section" id="top">
+        <div class="hero-grid container">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Deep Learning Indaba 2026 Workshop</p>
+            <h1>Beyond Benchmarks: Scaling Multi-Turn Participatory AI Evaluations in Health and Education</h1>
+            <p class="hero-subtitle">Deep Learning Indaba 2026 Workshop</p>
+            <p class="hero-description">
+              While traditional AI benchmarks are essential for baseline testing, they fall short in mapping
+              exactly where models falter across precise use cases and diverse population segments.
+              Co-organized by YUX Cultural AI Lab and Microsoft Research Africa, this hands-on workshop draws
+              on health and education studies in Rwanda, Kenya, and Senegal to teach researchers how to bridge
+              this gap using longitudinal diary studies.
+            </p>
+            <div class="hero-actions" aria-label="Workshop links">
+              <a class="button button-primary" href="#resources">View Workshop Materials</a>
+              <a class="button button-secondary" href="#about">Learn More</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-hidden="true">
+            <svg viewBox="0 0 720 560" role="img" aria-label="Abstract AI evaluation network pattern">
+              <defs>
+                <pattern id="trianglePattern" width="42" height="42" patternUnits="userSpaceOnUse">
+                  <path d="M0 42 21 0l21 42H0Z" fill="none" stroke="currentColor" stroke-width="3" />
+                  <path d="M21 0v42M0 42h42" stroke="currentColor" stroke-width="2" opacity=".45" />
+                </pattern>
+                <linearGradient id="nodeGlow" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#ffc947" />
+                  <stop offset="1" stop-color="#0718b8" />
+                </linearGradient>
+              </defs>
+              <circle class="pattern-disc" cx="374" cy="278" r="222" fill="url(#trianglePattern)" opacity=".18" />
+              <path
+                class="continent"
+                d="M300 86c70-27 151-2 197 57 45 58 67 138 36 197-30 60-112 79-154 131-42 53-87 139-153 111-66-27-39-127-72-188-34-61-124-92-119-163 5-72 98-94 152-121 38-19 73-9 113-24Z"
+              />
+              <g class="network-lines">
+                <path d="M178 216 294 174l126 72 98-84" />
+                <path d="M178 216 254 342l166-96 38 168" />
+                <path d="M254 342 412 454l106-292" />
+                <path d="M294 174 254 342l204 72" />
+              </g>
+              <g class="nodes">
+                <circle cx="178" cy="216" r="13" />
+                <circle cx="294" cy="174" r="17" />
+                <circle cx="420" cy="246" r="14" />
+                <circle cx="518" cy="162" r="12" />
+                <circle cx="254" cy="342" r="16" />
+                <circle cx="458" cy="414" r="13" />
+                <circle cx="412" cy="454" r="10" />
+              </g>
+              <g class="metric-cards">
+                <rect x="42" y="72" width="186" height="88" rx="18" />
+                <path d="M70 128h70M70 102h110M160 128h38" />
+                <rect x="484" y="392" width="178" height="96" rx="18" />
+                <path d="M516 456h108M516 428h74M610 428h24" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace the SVG files in assets/ with final partner logos when available. -->
+      <section class="logo-strip" aria-labelledby="partners-heading">
+        <div class="container">
+          <div class="section-heading compact reveal">
+            <p class="eyebrow">Partners & Organizers</p>
+            <h2 id="partners-heading">Co-created by research and deployment teams</h2>
+          </div>
+          <div class="logo-grid reveal">
+            <article class="logo-card">
+              <img src="assets/logo-yux-placeholder.svg" alt="YUX Cultural AI Lab logo placeholder" />
+              <span>YUX Cultural AI Lab</span>
+            </article>
+            <article class="logo-card">
+              <img src="assets/logo-kitala-placeholder.svg" alt="Kitala.ai logo placeholder" />
+              <span>Kitala.ai</span>
+            </article>
+            <article class="logo-card">
+              <img src="assets/logo-msr-placeholder.svg" alt="Microsoft Research Africa logo placeholder" />
+              <span>Microsoft Research Africa</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container split">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About the Workshop</p>
+            <h2>From static benchmark scores to grounded diagnostic evidence</h2>
+          </div>
+          <div class="prose reveal">
+            <p>
+              Traditional AI benchmarks provide an essential baseline for model performance and laboratory
+              validation, but they have stark limitations in real-world applications. They often fail in African
+              health and education deployments because they measure static, single-turn responses rather than
+              the iterative context-gathering required by actual users over time.
+            </p>
+            <p>
+              Co-organized by YUX Cultural AI Lab and Microsoft Research Africa, this interactive workshop uses
+              concrete examples from deployments in Rwanda, Kenya, and Senegal to bridge this evaluation gap.
+            </p>
+            <p>
+              Our core objective is to provide researchers and practitioners with the practical infrastructure
+              to map exactly where AI models fail across precise use cases and specific population segments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section" id="objectives">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow">Workshop Objectives</p>
+            <h2>Practical evaluation methods for complex human settings</h2>
+          </div>
+          <div class="card-grid four">
+            <article class="feature-card reveal">
+              <span class="card-number">01</span>
+              <h3>The Benchmark Breakdown</h3>
+              <p>
+                Analyze the strengths of automated baselines and the limitations of omitting dynamic human
+                behavior, local linguistic nuances, and socio-cultural safety considerations.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-number">02</span>
+              <h3>Design Multi-Turn Scenarios</h3>
+              <p>
+                Collaborate using custom persona cards to create realistic multi-day evaluation dialogues
+                tailored to different user groups.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-number">03</span>
+              <h3>Map Failures via Live Simulation</h3>
+              <p>
+                Use Kitala.ai to run evaluations, participate in simulations, and explore analytics dashboards.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="card-number">04</span>
+              <h3>Actionable Diagnostic Insights</h3>
+              <p>
+                Transform qualitative findings into structured evaluation insights and community-led standards.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="takeaways section">
+        <div class="container takeaway-panel reveal">
+          <div>
+            <p class="eyebrow">Workshop Takeaways</p>
+            <h2>Participants will leave with methods they can reuse immediately</h2>
+          </div>
+          <ul class="check-list">
+            <li>Hands-on experience in large-scale human-in-the-loop evaluation</li>
+            <li>Practical methods for identifying hidden model alignment gaps</li>
+            <li>Experience designing multi-turn evaluation frameworks</li>
+            <li>Open-source templates and methodologies for future deployments</li>
+            <li>Knowledge applicable to health and education AI systems</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="organizers">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Organizers</p>
+            <h2>Organizer details coming soon</h2>
+            <p>Placeholder cards are ready to replace with final names, roles, photos, and social links.</p>
+          </div>
+          <div class="people-grid">
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Organizer placeholder portrait" />
+              <h3>Organizer Name</h3>
+              <p>Title or Role</p>
+              <span>Organization</span>
+              <a href="#" aria-label="Organizer social profile">Social link</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section soft-section" id="resources">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Publications & Resources</p>
+            <h2>Research materials and related readings</h2>
+          </div>
+          <div class="publication-grid">
+            <article class="publication-card reveal">
+              <img src="assets/publication-placeholder.svg" alt="Publication thumbnail placeholder" />
+              <div>
+                <h3>Participatory Evaluation Protocols for Multi-Turn AI Systems</h3>
+                <p>Placeholder Author, Placeholder Author</p>
+                <span>Workshop Resource · 2026</span>
+                <a href="#" aria-label="Open publication">External link</a>
+              </div>
+            </article>
+            <article class="publication-card reveal">
+              <img src="assets/publication-placeholder.svg" alt="Publication thumbnail placeholder" />
+              <div>
+                <h3>Failure Mapping in Health and Education AI Deployments</h3>
+                <p>Placeholder Author, Placeholder Author</p>
+                <span>Case Study Collection · 2026</span>
+                <a href="#" aria-label="Open publication">External link</a>
+              </div>
+            </article>
+            <article class="publication-card reveal">
+              <img src="assets/publication-placeholder.svg" alt="Publication thumbnail placeholder" />
+              <div>
+                <h3>Longitudinal Diary Studies for AI Alignment Research</h3>
+                <p>Placeholder Author, Placeholder Author</p>
+                <span>Methods Brief · 2026</span>
+                <a href="#" aria-label="Open publication">External link</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="agenda">
+        <div class="container split agenda-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Workshop Agenda</p>
+            <h2>A hands-on day moving from critique to simulation</h2>
+            <p>Agenda subject to updates as speakers are confirmed.</p>
+          </div>
+          <ol class="timeline reveal" aria-label="Workshop schedule">
+            <li><time>09:00</time><span>Welcome</span></li>
+            <li><time>09:30</time><span>Benchmark Breakdown</span></li>
+            <li><time>10:30</time><span>Multi-Turn Evaluation Design</span></li>
+            <li><time>12:00</time><span>Lunch</span></li>
+            <li><time>13:00</time><span>Live Kitala.ai Simulation</span></li>
+            <li><time>15:00</time><span>Group Presentations</span></li>
+            <li><time>16:00</time><span>Closing Discussion</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section soft-section" id="speakers">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Speakers</p>
+            <h2>Speaker participation is tentative</h2>
+            <p>
+              Potential speakers currently under discussion include stakeholders from Ministry of Health Rwanda,
+              Irembo, and the Bill & Melinda Gates Foundation.
+            </p>
+          </div>
+          <div class="people-grid compact-cards">
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Speaker placeholder portrait" />
+              <h3>Speaker Name</h3>
+              <p>Tentative stakeholder</p>
+              <span>Ministry of Health Rwanda</span>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Speaker placeholder portrait" />
+              <h3>Speaker Name</h3>
+              <p>Tentative stakeholder</p>
+              <span>Irembo</span>
+            </article>
+            <article class="person-card reveal">
+              <img src="assets/person-placeholder.svg" alt="Speaker placeholder portrait" />
+              <h3>Speaker Name</h3>
+              <p>Tentative stakeholder</p>
+              <span>Bill & Melinda Gates Foundation</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section keywords-section" aria-labelledby="keywords-heading">
+        <div class="container">
+          <div class="section-heading centered reveal">
+            <p class="eyebrow">Keywords</p>
+            <h2 id="keywords-heading">Research themes</h2>
+          </div>
+          <div class="tag-cloud reveal">
+            <span>Multi-turn Evaluation</span>
+            <span>Participatory AI</span>
+            <span>Model Failure Mapping</span>
+            <span>Health AI</span>
+            <span>Education AI</span>
+            <span>Population Segmentation</span>
+            <span>LLM Benchmarking</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="repo-section section" id="repository">
+        <div class="container repo-panel reveal">
+          <div>
+            <p class="eyebrow">GitHub Repository</p>
+            <h2>Open materials for participatory AI evaluation</h2>
+            <p>https://github.com/YUX-Cultural-AI-Lab/Beyond-Benchmarks-DLI-2026-Workshop</p>
+          </div>
+          <a
+            class="button button-primary"
+            href="https://github.com/YUX-Cultural-AI-Lab/Beyond-Benchmarks-DLI-2026-Workshop"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            View Repository
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#top" aria-label="Beyond Benchmarks home">
+            <span class="brand-mark" aria-hidden="true">BB</span>
+            <span>
+              <strong>Beyond Benchmarks</strong>
+              <small>Deep Learning Indaba 2026 Workshop</small>
+            </span>
+          </a>
+          <p>Built for advancing participatory AI evaluation in African contexts.</p>
+        </div>
+        <ul aria-label="Workshop partners">
+          <li>YUX Cultural AI Lab</li>
+          <li>Kitala.ai</li>
+          <li>Microsoft Research Africa</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
