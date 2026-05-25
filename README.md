@@ -9,7 +9,7 @@ The site is designed for GitHub Pages: no build step, no backend, and no framewo
 - `index.html` - semantic single-page workshop website
 - `styles.css` - responsive design system, dark mode, animations, and layout
 - `script.js` - mobile navigation, dark mode persistence, and scroll reveal behavior
-- `assets/` - SVG favicon, social card, logo placeholders, organizer placeholders, and publication placeholders
+- `assets/` - SVG logo placeholders plus raster organizer and publication placeholders
 - `.nojekyll` - keeps GitHub Pages from processing the site with Jekyll
 
 ## Local Preview
@@ -40,13 +40,16 @@ GitHub Pages will publish the static site at the Pages URL shown in the settings
 
 ## Replacing Placeholder Assets
 
-The logo placeholders are intentionally isolated so they can be replaced easily:
+The logo placeholders are SVG files and are intentionally isolated so they can be replaced easily:
 
 - `assets/logo-yux-placeholder.svg`
 - `assets/logo-kitala-placeholder.svg`
 - `assets/logo-msr-placeholder.svg`
-- `assets/person-placeholder.svg`
-- `assets/publication-placeholder.svg`
+
+The image placeholders are raster files so they behave like the final photos and thumbnails:
+
+- `assets/person-placeholder.png`
+- `assets/publication-placeholder.jpg`
 
 To replace a placeholder, add the final image file to `assets/` and update the matching `<img src="...">` in `index.html`.
 
