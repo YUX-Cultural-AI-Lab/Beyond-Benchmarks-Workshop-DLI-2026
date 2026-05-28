@@ -376,6 +376,18 @@ ol {
   box-shadow: 0 18px 46px rgba(115, 87, 255, 0.3);
 }
 
+.button-solid {
+  border-color: transparent;
+  background: var(--navy);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(6, 23, 43, 0.18);
+}
+
+.button-solid:hover {
+  background: #0b2440;
+  box-shadow: 0 16px 34px rgba(6, 23, 43, 0.22);
+}
+
 .button-secondary {
   border-color: rgba(99, 227, 228, 0.32);
   background: rgba(255, 255, 255, 0.06);
@@ -876,9 +888,12 @@ ol {
 }
 
 .site-footer {
-  border-top: 1px solid var(--line);
-  background: var(--bg-soft);
-  padding: 42px 0;
+  border-top: 1px solid rgba(99, 227, 228, 0.18);
+  background:
+    radial-gradient(circle at 82% 12%, rgba(99, 227, 228, 0.12), transparent 26%),
+    linear-gradient(135deg, #06172b, #081d35 58%, #06172b);
+  padding: 48px 0;
+  color: #ffffff;
 }
 
 .footer-grid {
@@ -891,10 +906,22 @@ ol {
   margin-bottom: 18px;
 }
 
+.site-footer .brand strong {
+  color: #ffffff;
+}
+
+.site-footer .brand small {
+  color: rgba(255, 255, 255, 0.68);
+}
+
 .site-footer p,
 .site-footer li {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   font-weight: 700;
+}
+
+.site-footer li {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .site-footer ul {
