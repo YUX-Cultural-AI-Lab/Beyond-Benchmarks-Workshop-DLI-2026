@@ -7,8 +7,8 @@ The site is designed for GitHub Pages: no build step, no backend, and no framewo
 ## What's Included
 
 - `index.html` - semantic single-page workshop website
-- `styles.css` - responsive design system, dark mode, animations, and layout
-- `script.js` - mobile navigation, dark mode persistence, and scroll reveal behavior
+- `styles.css` - responsive design system, immersive branding, animations, and layout
+- `script.js` - mobile navigation and scroll reveal behavior
 - `assets/` - SVG logo placeholders plus raster organizer and publication placeholders
 - `.nojekyll` - keeps GitHub Pages from processing the site with Jekyll
 
@@ -74,10 +74,11 @@ Cards use repeated HTML patterns, so adding organizers, speakers, or publication
 
 ## Design Notes
 
-The visual system uses the provided YUX-inspired palette:
+The visual system uses the updated presentation-inspired palette:
 
 - White background: `#ffffff`
-- Accent blue: `#0718b8`
-- Secondary accent yellow: `#ffc947`
+- Deep navy: `#06172b`
+- Accent cyan: `#63e3e4`
+- Supporting indigo: `#4f5cf5`
 
-Blue and yellow are used as accents for calls to action, highlights, logos, chips, and illustration details while keeping most sections spacious and white.
+Cyan and indigo are used as accents for calls to action, highlights, logos, chips, and illustration details while keeping light mode spacious and white.

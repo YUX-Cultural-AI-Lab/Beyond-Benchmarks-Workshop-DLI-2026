@@ -3,8 +3,8 @@
   <desc id="desc">Network-inspired logo placeholder for Kitala.ai.</desc>
   <rect width="160" height="160" rx="18" fill="#ffffff"/>
   <rect x="1" y="1" width="158" height="158" rx="17" fill="none" stroke="#dfe4f0" stroke-width="2"/>
-  <path d="M44 112V48h18v26l30-26h24L82 77l38 35H96L62 81v31H44Z" fill="#0718b8"/>
-  <circle cx="114" cy="48" r="9" fill="#ffc947"/>
-  <circle cx="124" cy="112" r="9" fill="#ffc947"/>
-  <path d="M114 48 82 77l42 35" fill="none" stroke="#ffc947" stroke-width="5" stroke-linecap="round"/>
+  <path d="M44 112V48h18v26l30-26h24L82 77l38 35H96L62 81v31H44Z" fill="#06172b"/>
+  <circle cx="114" cy="48" r="9" fill="#63e3e4"/>
+  <circle cx="124" cy="112" r="9" fill="#4f5cf5"/>
+  <path d="M114 48 82 77l42 35" fill="none" stroke="#63e3e4" stroke-width="5" stroke-linecap="round"/>
 </svg>

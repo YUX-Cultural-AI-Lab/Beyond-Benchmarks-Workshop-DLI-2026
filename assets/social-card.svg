@@ -2,14 +2,14 @@
   <title id="title">Beyond Benchmarks social card</title>
   <desc id="desc">Social preview image for the Deep Learning Indaba 2026 workshop.</desc>
   <rect width="1200" height="630" fill="#ffffff"/>
-  <circle cx="920" cy="300" r="230" fill="#ffc947" opacity=".42"/>
-  <path d="M720 92c92-36 199-2 260 75 60 78 90 184 49 262-40 80-148 106-204 176-55 70-115 184-202 147-87-36-52-168-95-249-45-80-164-121-157-215 6-95 129-124 200-160 50-25 97-12 149-36Z" fill="#0718b8" opacity=".1"/>
-  <g stroke="#0718b8" stroke-width="5" opacity=".22">
+  <circle cx="920" cy="300" r="230" fill="#63e3e4" opacity=".34"/>
+  <path d="M720 92c92-36 199-2 260 75 60 78 90 184 49 262-40 80-148 106-204 176-55 70-115 184-202 147-87-36-52-168-95-249-45-80-164-121-157-215 6-95 129-124 200-160 50-25 97-12 149-36Z" fill="#06172b" opacity=".1"/>
+  <g stroke="#06172b" stroke-width="5" opacity=".22">
     <path d="M742 244 890 188l162 92 74-66"/>
     <path d="M742 244 838 410l214-130"/>
     <path d="M838 410 1032 510l94-296"/>
   </g>
-  <g fill="#0718b8">
+  <g fill="#4f5cf5">
     <circle cx="742" cy="244" r="16"/>
     <circle cx="890" cy="188" r="20"/>
     <circle cx="1052" cy="280" r="17"/>
@@ -17,8 +17,8 @@
     <circle cx="838" cy="410" r="18"/>
     <circle cx="1032" cy="510" r="14"/>
   </g>
-  <path d="M70 140h34l40 64 40-64h34l-57 92v44h-34v-44L70 140Z" fill="#ffc947"/>
-  <text x="70" y="352" font-family="Space Grotesk, Inter, sans-serif" font-size="72" font-weight="700" fill="#141722">Beyond Benchmarks</text>
-  <text x="70" y="424" font-family="Inter, sans-serif" font-size="34" font-weight="700" fill="#0718b8">Deep Learning Indaba 2026 Workshop</text>
-  <text x="70" y="488" font-family="Inter, sans-serif" font-size="28" fill="#5d6475">Scaling multi-turn participatory AI evaluations in health and education</text>
+  <path d="M70 140h34l40 64 40-64h34l-57 92v44h-34v-44L70 140Z" fill="#63e3e4"/>
+  <text x="70" y="352" font-family="Space Grotesk, Inter, sans-serif" font-size="72" font-weight="700" fill="#07162b">Beyond Benchmarks</text>
+  <text x="70" y="424" font-family="Inter, sans-serif" font-size="34" font-weight="700" fill="#16a8cb">Deep Learning Indaba 2026 Workshop</text>
+  <text x="70" y="488" font-family="Inter, sans-serif" font-size="28" fill="#5b6678">Scaling multi-turn participatory AI evaluations in health and education</text>
 </svg>

@@ -1,18 +1,6 @@
-const root = document.documentElement;
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const storedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-root.dataset.theme = storedTheme || (prefersDark ? "dark" : "light");
-
-themeToggle?.addEventListener("click", () => {
-  const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = nextTheme;
-  localStorage.setItem("theme", nextTheme);
-});
 
 navToggle?.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
