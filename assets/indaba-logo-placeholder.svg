@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Learning Indaba logo placeholder</title>
+  <desc id="desc">Restrained placeholder mark for the Deep Learning Indaba affiliation.</desc>
+  <rect width="180" height="180" rx="18" fill="#ffffff"/>
+  <rect x="1" y="1" width="178" height="178" rx="17" fill="none" stroke="#dbe8ef" stroke-width="2"/>
+  <circle cx="90" cy="90" r="54" fill="#06172b"/>
+  <path d="M58 110 90 48l32 62H58Z" fill="none" stroke="#63e3e4" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M73 105h34M81 88h18" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="90" cy="48" r="8" fill="#4f5cf5"/>
+</svg>
