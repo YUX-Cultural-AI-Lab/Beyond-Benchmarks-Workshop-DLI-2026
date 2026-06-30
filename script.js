@@ -42,3 +42,73 @@ if ("IntersectionObserver" in window) {
 } else {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }
+
+const registrationForm = document.querySelector("[data-registration-form]");
+const registrationStatus = document.querySelector("[data-registration-status]");
+const isLocalHost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+const registrationEndpoint = window.REGISTRATION_ENDPOINT || (isLocalHost ? "/api/register" : "");
+
+const setRegistrationStatus = (message, type = "") => {
+  if (!registrationStatus) return;
+
+  registrationStatus.textContent = message;
+  registrationStatus.classList.toggle("is-success", type === "success");
+  registrationStatus.classList.toggle("is-error", type === "error");
+};
+
+registrationForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const submitButton = registrationForm.querySelector('button[type="submit"]');
+  const formData = new FormData(registrationForm);
+  const payload = Object.fromEntries(formData.entries());
+  payload.areasOfInterest = formData.getAll("areasOfInterest");
+
+  if (!registrationEndpoint) {
+    setRegistrationStatus("Registration endpoint is not configured for production.", "error");
+    return;
+  }
+
+  submitButton.disabled = true;
+  setRegistrationStatus("Submitting...");
+
+  try {
+    if (registrationEndpoint.startsWith("http")) {
+      const spreadsheetPayload = new URLSearchParams();
+      Object.entries(payload).forEach(([key, value]) => {
+        spreadsheetPayload.set(key, Array.isArray(value) ? value.join("; ") : value);
+      });
+
+      await fetch(registrationEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        body: spreadsheetPayload,
+      });
+
+      registrationForm.reset();
+      setRegistrationStatus("Registration submitted. Thank you.", "success");
+      return;
+    }
+
+    const response = await fetch(registrationEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "Registration failed.");
+    }
+
+    registrationForm.reset();
+    setRegistrationStatus("Registration submitted. Thank you.", "success");
+  } catch (error) {
+    setRegistrationStatus(error.message || "Unable to submit registration.", "error");
+  } finally {
+    submitButton.disabled = false;
+  }
+});
