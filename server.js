@@ -16,6 +16,8 @@ const csvHeaders = [
   "role",
   "primaryLanguages",
   "otherLanguages",
+  "countryOfOrigin",
+  "currentResidence",
   "aiEvaluationExperience",
   "areasOfInterest",
   "expectations",
@@ -52,7 +54,9 @@ const ensureRegistrationFile = () => {
 };
 
 const sendJson = (res, statusCode, body) => {
-  res.writeHead(statusCode, { "Content-Type": "application/json; charset=utf-8" });
+  res.writeHead(statusCode, {
+    "Content-Type": "application/json; charset=utf-8",
+  });
   res.end(JSON.stringify(body));
 };
 
@@ -81,7 +85,9 @@ const parseRequestBody = (req) =>
   });
 
 const escapeCsvValue = (value) => {
-  const normalizedValue = Array.isArray(value) ? value.join("; ") : String(value || "");
+  const normalizedValue = Array.isArray(value)
+    ? value.join("; ")
+    : String(value || "");
   return `"${normalizedValue.replaceAll('"', '""')}"`;
 };
 
@@ -90,7 +96,9 @@ const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const handleRegistration = async (req, res) => {
   try {
     const payload = await parseRequestBody(req);
-    const missingField = requiredFields.find((field) => !String(payload[field] || "").trim());
+    const missingField = requiredFields.find(
+      (field) => !String(payload[field] || "").trim(),
+    );
 
     if (missingField) {
       sendJson(res, 400, { error: "Please complete all required fields." });
@@ -105,19 +113,24 @@ const handleRegistration = async (req, res) => {
     ensureRegistrationFile();
 
     const row = csvHeaders.map((header) => {
-      if (header === "submittedAt") return escapeCsvValue(new Date().toISOString());
+      if (header === "submittedAt")
+        return escapeCsvValue(new Date().toISOString());
       return escapeCsvValue(payload[header]);
     });
 
     fs.appendFileSync(REGISTRATIONS_FILE, `${row.join(",")}\n`);
     sendJson(res, 201, { ok: true });
   } catch (error) {
-    sendJson(res, 400, { error: error.message || "Unable to save registration." });
+    sendJson(res, 400, {
+      error: error.message || "Unable to save registration.",
+    });
   }
 };
 
 const serveStaticFile = (req, res) => {
-  const requestPath = decodeURIComponent(new URL(req.url, `http://${req.headers.host}`).pathname);
+  const requestPath = decodeURIComponent(
+    new URL(req.url, `http://${req.headers.host}`).pathname,
+  );
   const safePath = path.normalize(requestPath).replace(/^(\.\.[/\\])+/, "");
   const filePath = path.join(ROOT, safePath === "/" ? "index.html" : safePath);
 
@@ -134,7 +147,9 @@ const serveStaticFile = (req, res) => {
       return;
     }
 
-    const contentType = mimeTypes[path.extname(filePath).toLowerCase()] || "application/octet-stream";
+    const contentType =
+      mimeTypes[path.extname(filePath).toLowerCase()] ||
+      "application/octet-stream";
     res.writeHead(200, { "Content-Type": contentType });
     res.end(content);
   });

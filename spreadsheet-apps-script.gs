@@ -8,6 +8,8 @@ const HEADERS = [
   "role",
   "primaryLanguages",
   "otherLanguages",
+  "countryOfOrigin",
+  "currentResidence",
   "aiEvaluationExperience",
   "areasOfInterest",
   "expectations",
@@ -24,9 +26,9 @@ function doPost(event) {
 
   sheet.appendRow(row);
 
-  return ContentService.createTextOutput(JSON.stringify({ ok: true })).setMimeType(
-    ContentService.MimeType.JSON
-  );
+  return ContentService.createTextOutput(
+    JSON.stringify({ ok: true }),
+  ).setMimeType(ContentService.MimeType.JSON);
 }
 
 function getRegistrationSheet() {
