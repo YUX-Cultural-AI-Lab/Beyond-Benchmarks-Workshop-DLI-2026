@@ -1,2 +1,2 @@
 window.REGISTRATION_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbxwuwJy3qAKdiurcg87RP0Xxv36kHJECHX8g-Qx-SDmw-s1J-PUlJTqM6i-Nb6DgMIC9A/exec";
+  "https://script.google.com/macros/s/AKfycby8w-hyI26tU2s5d25zMEjkLpfJ3dUg2N-xvKezQAzPOV48TW8d01tvqL9SjBO92Yvm/exec";
