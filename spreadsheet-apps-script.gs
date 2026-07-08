@@ -41,7 +41,26 @@ function getRegistrationSheet() {
 
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(HEADERS);
+  } else {
+    syncHeaderRow(sheet);
   }
 
   return sheet;
+}
+
+function syncHeaderRow(sheet) {
+  HEADERS.forEach((header, index) => {
+    const column = index + 1;
+    const currentHeader = sheet.getRange(1, column).getValue();
+
+    if (currentHeader === header) return;
+
+    const lastColumn = Math.max(sheet.getLastColumn(), column);
+    const headerRow = sheet.getRange(1, 1, 1, lastColumn).getValues()[0];
+
+    if (headerRow.includes(header)) return;
+
+    sheet.insertColumnBefore(column);
+    sheet.getRange(1, column).setValue(header);
+  });
 }
