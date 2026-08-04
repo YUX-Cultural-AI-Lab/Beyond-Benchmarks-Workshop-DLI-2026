@@ -346,9 +346,46 @@ ol {
   letter-spacing: 0;
 }
 
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 640px;
+  margin: 22px 0 0;
+  border: 1px solid rgba(99, 227, 228, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+}
+
+.event-details div {
+  min-width: 0;
+  padding: 14px 16px;
+}
+
+.event-details div + div {
+  border-left: 1px solid rgba(99, 227, 228, 0.22);
+}
+
+.event-details dt {
+  color: var(--blue);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.event-details dd {
+  margin: 5px 0 0;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .hero-description {
   max-width: 640px;
-  margin-top: 14px;
+  margin-top: 18px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.98rem;
 }
@@ -1225,6 +1262,15 @@ ol {
 
   .hero-actions {
     align-items: stretch;
+  }
+
+  .event-details {
+    grid-template-columns: 1fr;
+  }
+
+  .event-details div + div {
+    border-top: 1px solid rgba(99, 227, 228, 0.22);
+    border-left: 0;
   }
 
   .hero-visual svg {
