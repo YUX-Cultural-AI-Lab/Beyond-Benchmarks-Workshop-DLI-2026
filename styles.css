@@ -535,6 +535,21 @@ ol {
   color: var(--muted);
 }
 
+.section-heading .agenda-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--blue-2);
+  font-weight: 800;
+}
+
+.agenda-location svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -608,7 +623,6 @@ ol {
 .feature-card,
 .person-card,
 .publication-card,
-.speakers-heading,
 .repo-panel,
 .takeaway-panel {
   border: 1px solid var(--line);
@@ -998,30 +1012,6 @@ ol {
 
 .compact-cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.speakers-heading {
-  max-width: none;
-  opacity: 0.72;
-  padding: 34px;
-  text-align: center;
-}
-
-.speakers-heading .eyebrow {
-  margin-inline: auto;
-  color: #7c8897;
-}
-
-.speakers-heading h2 {
-  background: linear-gradient(94deg, #718096, #a7b1bf);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.speakers-heading p {
-  max-width: 560px;
-  margin-inline: auto;
 }
 
 .keywords-section {
